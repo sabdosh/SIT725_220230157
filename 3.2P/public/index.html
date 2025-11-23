@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plant Paradise</title>
+
+  
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="green">
+  <div class="nav-wrapper">
+    <span class="nav-title">Plant Paradise</span>
+    <a href="#" class="brand-logo right">
+      <img src="images/logo.jpg" class="nav-logo" />
+    </a>
+
+  </div>
+</nav>
+
+  <main class="container">
+    <h3 class="section-1">Welcome to Plant Paradise!</h3>
+<h4 class="section-2">Discover the joy of growing and caring for beautiful plants. At Plant Paradise, we celebrate the greenery that brightens our homes, cleans our air, and lifts our spirits. Whether you’re a beginner or a plant lover, this space is designed to help you learn, explore, and connect with nature - one leaf at a time. 🌱</h4>
+    <div class="row" id="card-section">
+      <div class="col s12 m4 center-align">
+        <div class="card medium">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="images/aloe.webp">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">
+              Aloe Vera
+              <i class="material-icons right">more_vert</i>
+            </span>
+            <p><a href="#">More info</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">
+              Aloe Vera
+              <i class="material-icons right">close</i>
+            </span>
+            <p>A soothing plant great for skin and air purification.</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col s12 m4 center-align">
+        <div class="card medium">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="images/lilly.webp">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">
+              Snake Plant
+              <i class="material-icons right">more_vert</i>
+            </span>
+            <p><a href="#">More info</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">
+              Snake Plant
+              <i class="material-icons right">close</i>
+            </span>
+            <p>Very hardy and perfect for beginners.</p>
+          </div>
+        </div>
+      </div>
+
+  
+      <div class="col s12 m4 center-align">
+        <div class="card medium">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="images/snake.webp">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">
+              Peace Lily
+              <i class="material-icons right">more_vert</i>
+            </span>
+            <p><a href="#">More info</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">
+              Peace Lily
+              <i class="material-icons right">close</i>
+            </span>
+            <p>A beautiful indoor plant that cleans the air.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+     <a class="waves-effect waves-light btn modal-trigger" data-target="addPlantModal">
+  <i class="material-icons left">add</i>Add Plant
+</a>
+
+<div id="addPlantModal" class="modal">
+  <div class="modal-content">
+    <h4>Add a new plant</h4>
+
+    <div class="input-field">
+      <input id="plantName" type="text">
+      <label for="plantName">Plant Name</label>
+    </div>
+
+    <div class="input-field">
+      <input id="plantDesc" type="text">
+      <label for="plantDesc">Description</label>
+    </div>
+
+    <a class="waves-effect waves-light btn" id="formSubmit">Add Plant</a>
+  </div>
+</div>
+
+  </main>
+
+ 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>
