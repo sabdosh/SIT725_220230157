@@ -1,0 +1,50 @@
+
+
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #eef5ed;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #264d2c;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e4e4e4;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  /* Hover effect */
+  li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(38, 77, 44, 0.15);
+    border-color: #7bb37e;
+  }
+
+  
+  .book-author {
+    color: #555;
+    font-size: 0.95rem;
+  }
