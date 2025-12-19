@@ -1,5 +1,14 @@
 {
   "dependencies": {
     "mongoose": "^9.0.0"
-  }
+  },
+  "devDependencies": {
+    "chai": "^6.2.1",
+    "mocha": "^11.7.5",
+    "supertest": "^7.1.4"
+  },
+  "scripts": {
+  "test": "mocha"
+}
+
 }

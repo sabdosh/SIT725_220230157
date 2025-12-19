@@ -3,7 +3,6 @@ const path = require('path');
 const mongoose = require('mongoose'); 
 
 const app = express();
-const PORT = 3000;
 
 const MONGO_URI = 'mongodb://localhost:27017/sit725_books';
 
@@ -21,6 +20,14 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+
+const PORT = process.env.PORT || 3000;
+
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+module.exports = app;
+

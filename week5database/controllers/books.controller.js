@@ -2,7 +2,7 @@ const booksService = require('../services/books.service');
 
 async function getAllBooks(req, res, next) {
   try {
-    const items = await booksService.getAllBooks();s
+    const items = await booksService.getAllBooks();
 
     res.status(200).json({
       statusCode: 200,
