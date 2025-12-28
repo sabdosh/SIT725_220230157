@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SIT725 Live Mood Poll</title>
+    <style>
+      body { font-family: Arial; margin: 40px; }
+      .box { max-width: 520px; padding: 20px; border: 1px solid #ddd; border-radius: 12px; }
+      button { font-size: 18px; padding: 10px 14px; margin-right: 8px; cursor: pointer; }
+      .row { margin-top: 16px; }
+      .stat { margin: 6px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Live Mood Poll</h2>
+
+      <div class="row">
+        <button data-vote="up">👍</button>
+        <button data-vote="down">👎</button>
+      </div>
+
+      <div class="row">
+        <div class="stat">👍 Happy: <span id="up">0</span></div>
+        <div class="stat">👎 Sad: <span id="down">0</span></div>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
