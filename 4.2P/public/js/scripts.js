@@ -34,10 +34,11 @@ $(document).ready(function () {
 
   $(".modal").modal();
 
-  $.get("/api/plants", (data) => {
-    window.currentPlants = data;
-    addCards(data);
-  });
+$.get("/api/plants", (response) => {
+  const plants = response.data || response; 
+  window.currentPlants = plants;
+  addCards(plants);
+});
 
   //Gets the text
   const addPlantFromForm = () => {
