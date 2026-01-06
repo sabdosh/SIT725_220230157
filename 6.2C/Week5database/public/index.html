@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Books Catalogue</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Books Catalogue developed by s220230157</h1>
+    <p>Click the button below to get all book items:</p>
+<button id="getBooksBtn" onclick="loadBooks()">Get all books</button>
+
+    <ul id="booksList"></ul>
+
+    <div id="bookDetail"></div>
+
+    <script>
+
+function loadBooks() {
+    const booksList = document.getElementById('booksList');
+    const bookDetail = document.getElementById('bookDetail');
+
+    booksList.innerHTML = 'Loading books...';
+    bookDetail.innerHTML = '';
+
+    fetch('/api/books')
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (json) {
+        const books = json.data || [];
+        booksList.innerHTML = '';
+        bookDetail.innerHTML = '';
+
+        if (books.length === 0) {
+          booksList.innerHTML = '<li>No books found.</li>';
+          return;
+        }
+
+        books.forEach(function (book) {
+          const li = document.createElement('li');
+li.textContent = book.title + ' ' + book.price.$numberDecimal;
+
+          li.onclick = function () {
+            loadBookDetail(book.id);
+          };
+
+          booksList.appendChild(li);
+        });
+      })
+      .catch(function (error) {
+        console.error('Error loading books:', error);
+        booksList.innerHTML = '<li>Error loading books.</li>';
+      });
+  }
+//load for a single book
+  function loadBookDetail(id) {
+    const bookDetail = document.getElementById('bookDetail');
+    bookDetail.innerHTML = 'Loading book details...';
+
+    fetch('/api/books/' + id)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (json) {
+        const b = json.data;
+
+        bookDetail.innerHTML = `
+          <h2>${b.title}</h2>
+          <p><strong>Author:</strong> ${b.author}</p>
+          <p><strong>Year:</strong> ${b.year}</p>
+          <p><strong>Genre:</strong> ${b.genre}</p>
+          <p><strong>Summary:</strong> ${b.summary}</p>
+          <p><strong>Price:</strong> ${b.price.$numberDecimal}</p>`;
+      })
+      
+  }
+</script>
+
+  </body>
+</html>

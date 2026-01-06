@@ -3,12 +3,12 @@
     "mongoose": "^9.0.0"
   },
   "devDependencies": {
-    "chai": "^6.2.1",
+    "chai": "^6.2.2",
     "mocha": "^11.7.5",
+    "request": "^2.88.2",
     "supertest": "^7.1.4"
   },
   "scripts": {
-  "test": "mocha"
-}
-
+    "test": "mocha"
+  }
 }

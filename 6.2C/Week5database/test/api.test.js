@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../Week5database/server');
+const app = require('../server');
 
 describe('Books API', () => {
   it('GET /api/books should return 200', async () => {

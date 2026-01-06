@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { calculateTotalPrice } = require('../Week5database/utils/calc');
+const { calculateTotalPrice } = require('../utils/calc');
 
 describe('calculateTotalPrice()', () => {
   it('should calculate total correctly', () => {
